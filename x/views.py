@@ -6,7 +6,7 @@ from django.http import HttpResponse
 # Create your views here.
 def x(request):
     # return HttpResponse('Hello from Python!')
-    return HttpResponse('Hello from Django!')
-
+    context = {'responce': "ok"}
+    return render(request, "x.html", context)
 
 
