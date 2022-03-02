@@ -18,6 +18,6 @@ import x.views
 urlpatterns = [
     path("", hello.views.index, name="index"),
     path("db/", hello.views.db, name="db"),
-    path("x.html", x.views.x, name="x"),
+    path("x/<str:m>/<str:u>", x.views.x, name="x"),
     path("admin/", admin.site.urls),
 ]
