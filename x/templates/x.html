@@ -1,16 +1,14 @@
+
 {% load static %}
+
+{% block javascript %}
+  {{ block.super }} {# this loads the base js scripts #}
+	<script src="{% static 'alert.js'%}"></script>
+{% endblock %}
+
 
 {% block content %}
 
-<head>
-<meta charset="utf-8"/>
-<script src="{% static 'alert.js'%}"></script>
-</head>
-
-<body>
-
 <p id="text"></p>
-
-</body>
 
 {% endblock %}
